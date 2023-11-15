@@ -14,8 +14,8 @@ createApp({
     },
 
     methods:{
-        deleteTask: function(){
-            console.log("Ciao");
+        deleteTask: function(index){
+            this.tasks.splice(index, 1)
         },
 
         addTask: function(){
