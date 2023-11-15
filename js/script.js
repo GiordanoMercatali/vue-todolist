@@ -14,14 +14,17 @@ createApp({
     },
 
     methods:{
-        deleteTask: function(index){
-            this.tasks.splice(index, 1)
+        
+        addTask: function(i){
+            this.tasks.push(this.newTask);
+            console.log(this.tasks, this.tasks.length);
+            this.newTask = "";
         },
 
-        addTask: function(){
-            this.tasks.push(this.newTask);
-            this.newTask = "";
-        }
+        deleteTask: function(index){
+            this.tasks.splice(index, 1);
+            console.log(this.tasks);
+        },
     },
 
     created(){

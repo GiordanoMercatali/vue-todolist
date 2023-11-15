@@ -31,7 +31,7 @@
                         <button class="btn btn-primary" @click="addTask">Add</button>
 
                         <ul>
-                            <li v-for="(task, index) in tasks">N.{{index + 1}} {{tasks[index]}}  <button @click="deleteTask"> X </button> </li>
+                            <li v-for="(task, index) in tasks">N.{{index + 1}} {{tasks[index]}}  <button @click="deleteTask(index)"> X </button> </li>
                         </ul>
 
                     </div>
