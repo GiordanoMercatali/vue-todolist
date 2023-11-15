@@ -18,9 +18,24 @@
 
         <main>
             <div id="app">
-                <ul>
-                    <li v-for="(task, index) in tasks">N.{{index + 1}} {{tasks[index]}}</li>
-                </ul>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-6">
+
+                        <div class="mb-3">
+                            <label for="task" class="form-label">Insert new task to do</label>
+                            <input type="text" class="form-control" id="task" v-model="newTask"/>
+                        </div>
+            
+                        <button class="btn btn-primary" @click="addTask">Add</button>
+
+                        <ul>
+                            <li v-for="(task, index) in tasks">N.{{index + 1}} {{tasks[index]}}  <button @click="deleteTask"> X </button> </li>
+                        </ul>
+
+                    </div>
+                </div>
             </div>
         </main>
 

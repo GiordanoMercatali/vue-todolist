@@ -6,12 +6,22 @@ createApp({
             tasks: [
                 "Wash the dishes",
                 "Prepare diner",
-                "Pick up son from school"
+                "Pick up kids from school"
             ],
+
+            newTask: "",
         };
     },
 
     methods:{
+        deleteTask: function(){
+            console.log("Ciao");
+        },
+
+        addTask: function(){
+            this.tasks.push(this.newTask);
+            this.newTask = "";
+        }
     },
 
     created(){
