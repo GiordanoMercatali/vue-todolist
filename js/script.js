@@ -5,25 +5,25 @@ createApp({
         return{
             tasks: [
                 {
-                    task_desc: "Wash the dishes",
-                    task_done: false,
+                    description: "Wash the dishes",
+                    done: false,
                 },
 
                 {
-                    task_desc: "Prepare diner",
-                    task_done: false,
+                    description: "Prepare diner",
+                    done: false,
                 },
 
                 {
-                    task_desc: "Pick up kids from school",
-                    task_done: false,
+                    description: "Pick up kids from school",
+                    done: false,
                 },
                 
             ],
 
             newTask: {
-                task_desc: "",
-                task_done: false,
+                description: "",
+                done: false,
             },
         };
     },
@@ -32,7 +32,7 @@ createApp({
         
         addTask: function(){
 
-            if (this.newTask.task_desc !== ""){
+            if (this.newTask.description !== ""){
                 this.tasks.push(this.newTask);                
             } else{
                 alert("Write something...");
