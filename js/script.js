@@ -33,11 +33,12 @@ createApp({
         addTask: function(){
 
             if (this.newTask.task_desc !== ""){
-                this.tasks.push(this.newTask);
-                this.newTask = "";
+                this.tasks.push(this.newTask);                
             } else{
                 alert("Write something...");
-            }           
+            }
+
+            this.newTask = "";    
         },
 
         deleteTask: function(index){
