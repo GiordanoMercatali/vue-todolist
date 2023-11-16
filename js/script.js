@@ -4,26 +4,39 @@ createApp({
     data(){
         return{
             tasks: [
-                "Wash the dishes",
-                "Prepare diner",
-                "Pick up kids from school"
+                {
+                    task_desc: "Wash the dishes",
+                    task_done: false,
+                },
+
+                {
+                    task_desc: "Prepare diner",
+                    task_done: false,
+                },
+
+                {
+                    task_desc: "Pick up kids from school",
+                    task_done: false,
+                },
+                
             ],
 
-            newTask: "",
+            newTask: {
+                task_desc: "",
+                task_done: false,
+            },
         };
     },
 
     methods:{
         
-        addTask: function(i){
+        addTask: function(){
             this.tasks.push(this.newTask);
-            console.log(this.tasks, this.tasks.length);
             this.newTask = "";
         },
 
         deleteTask: function(index){
             this.tasks.splice(index, 1);
-            console.log(this.tasks);
         },
     },
 
