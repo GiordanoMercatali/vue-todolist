@@ -31,8 +31,13 @@ createApp({
     methods:{
         
         addTask: function(){
-            this.tasks.push(this.newTask);
-            this.newTask = "";
+
+            if (this.newTask.task_desc !== ""){
+                this.tasks.push(this.newTask);
+                this.newTask = "";
+            } else{
+                alert("Write something...");
+            }           
         },
 
         deleteTask: function(index){
