@@ -38,7 +38,10 @@ createApp({
                 alert("Write something...");
             }
 
-            this.newTask = "";    
+            this.newTask = {
+                description: "",
+                done: false,
+            };  
         },
 
         deleteTask: function(index){
